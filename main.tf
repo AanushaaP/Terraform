@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "testrg" {
     location = "westus"
 }
 
-resource "azurerm_storage_account" "testsa" {
+resource "azurerm_storage_account" "testrg" {
     name = "storageaccountname"
     resource_group_name = "resourceGroupName"
 

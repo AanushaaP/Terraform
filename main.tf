@@ -11,8 +11,5 @@ resource "azurerm_storage_account" "testsa" {
     account_type = "Standard_GRS"
     access_tier =  "Hot"
     account_kind = "BlobStorage"
-
-    tags {
-        environment = "Dev"
-    }
+   
 }

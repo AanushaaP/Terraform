@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "testrg" {
 
 resource "azurerm_storage_account" "testsa" {
     name = "storageaccountname"
-    resource_group_name = "${azurerm_resource_group.testrg.name}"
+    resource_group_name = "resourceGroupName"
 
     location = "westus"
     account_tier = "Standard"

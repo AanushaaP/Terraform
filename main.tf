@@ -1,10 +1,18 @@
-resource "azurerm_storage_blob" "example" {
-  name                      = "ExampleStorage"
-  resource_group_name       = "azurerm_storage_blob"
-  storage_account_name      = "mydev001"
-  location                  = "eastasia"
-  account_tier              = "Standard_LRS"
-  account_kind              = "BlobStorage"
-  enable_https_traffic_only = "true"
-  access_tier               = "Hot"
+resource "azurerm_resource_group" "testrg" {
+    name = "resourceGroupName"
+    location = "westus"
+}
+
+resource "azurerm_storage_account" "testsa" {
+    name = "storageaccountname"
+    resource_group_name = "${azurerm_resource_group.testrg.name}"
+
+    location = "westus"
+    account_type = "Standard_GRS"
+    access_tier =  "Hot"
+    account_kind = "BlobStorage"
+
+    tags {
+        environment = "Dev"
+    }
 }

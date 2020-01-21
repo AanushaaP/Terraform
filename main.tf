@@ -1,8 +1,3 @@
-resource "azurerm_resource_group" "testrg" {
-    name = "resourceGroupName"
-    location = "westus"
-}
-
 resource "azurerm_storage_account" "testrg" {
     name = "storageaccounttest12"
     resource_group_name = "resourceGroupName"

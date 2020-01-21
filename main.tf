@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "testrg" {
-    name = "storageaccountsample"
+    name = "storageaccountsample124"
     resource_group_name = "resourceGroupName"
 
     location = "westus"
